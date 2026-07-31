@@ -1,0 +1,14 @@
+{
+  "status": "reproduction scaffold only; not a validated RL improvement claim",
+  "base_model": "Qwen3.5-4B (user-supplied, locally licensed)",
+  "seed": 42,
+  "rlhf_type": "grpo",
+  "learning_rate": 0.000005,
+  "beta": 0.04,
+  "num_generations": 8,
+  "per_device_train_batch_size": 8,
+  "max_steps": 100,
+  "max_length": 6144,
+  "max_completion_length": 512,
+  "reward_plugin": "scripts/refund_grpo_reward_plugin.py"
+}

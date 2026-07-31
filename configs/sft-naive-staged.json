@@ -1,0 +1,10 @@
+{
+  "name": "naive-staged",
+  "base_model": "Qwen3.5-4B (user-supplied, locally licensed)",
+  "seed": 42,
+  "records": 1800,
+  "data_builder": {"method": "naive_staged", "records": 1800, "stages": ["75% full + 25% partial", "50% partial + 50% minimal", "25% minimal + 75% no_skill"]},
+  "continuation_control": {"inherit_previous_stage_adapter": true, "fixed_learning_rate": 0.0001, "fixed_optimizer": true, "fixed_lr_schedule": true, "only_record_order_changes_in_order_control": true},
+  "lora": {"rank": 8, "alpha": 16, "target_modules": "all-linear"},
+  "training": {"epochs": 3, "learning_rate": 0.0001, "per_device_batch_size": 1, "gradient_accumulation_steps": 8, "precision": "bf16"}
+}

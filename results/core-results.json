@@ -1,0 +1,35 @@
+{
+  "metric": "decision_accuracy unless otherwise stated",
+  "stage_c_main": {
+    "evaluation_records": 384,
+    "per_exposure_records": 96,
+    "full_only": {"full": 0.9792, "no_skill": 0.0},
+    "random_mix": {"full": 1.0, "partial": 0.9792, "minimal": 0.9271, "no_skill": 0.9062, "mean": 0.9531},
+    "naive_staged": {"full": 0.9896, "partial": 0.9583, "minimal": 0.9062, "no_skill": 0.875, "mean": 0.9323},
+    "source": "experiments/stagec_causal_ablation_20260629/summary.json"
+  },
+  "causal_2x2": {
+    "stage_c": {"old_marginal_shuffled": 0.9531, "old_marginal_staged": 0.9323, "uniform_marginal_shuffled": 0.9896, "uniform_marginal_staged": 0.9193},
+    "hard_boundary_lite": {"old_marginal_shuffled": 0.5556, "old_marginal_staged": 0.4583, "uniform_marginal_shuffled": 0.5556, "uniform_marginal_staged": 0.4722},
+    "source": "experiments/stagec_causal_ablation_20260629/summary.json"
+  },
+  "mechanism_ablation": {
+    "evaluation": "24 source cases expanded to 960 prompts",
+    "random_mix": {"fact_mutation_accuracy": 0.8167, "no_skill_overall": 0.9583},
+    "naive_staged": {"fact_mutation_accuracy": 0.7389, "no_skill_overall": 0.9167},
+    "source": "experiments/mechanism_ablation_s24_summary_20260622.json"
+  },
+  "cross_skill_pilot": {
+    "metric": "construct-balanced staged_minus_random, percentage points",
+    "refund_decision": 8.33,
+    "warranty_claim_decision": 1.82,
+    "expense_reimbursement_decision": -37.76,
+    "source": "experiments/multiskill_prompt_robustness_pilot_20260724/frozen_discovery_analysis_20260725.md"
+  },
+  "gradient_audit": {
+    "refund_paired_groups": 2048,
+    "cross_skill_paired_groups": 1536,
+    "conclusion": "Prompt-form sensitive; cross-skill prediction gate was not passed. Descriptive evidence only.",
+    "source": "experiments/paired_exposure_gradient_v0/phase2_core_gradient_20260724_formal_analysis.json; experiments/multiskill_prompt_robustness_pilot_20260724/gradient_boundary_v0"
+  }
+}

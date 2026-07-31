@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "run_count": 6,
+  "total_optimizer_steps": 12,
+  "validation_scratch_only": true,
+  "confirmation_used": false,
+  "formal_training_started": false,
+  "error_count": 0,
+  "note": "Redacted public smoke summary. No remote training, weights, or raw runtime logs are included."
+}

@@ -1,0 +1,1075 @@
+{
+  "protocol_version": "multiskill_prompt_robustness_pilot_v2_1",
+  "status": "discovery_frozen_analysis_fail",
+  "date": "2026-07-24",
+  "implementation_permitted": true,
+  "remote_training_permitted": false,
+  "local_implementation_evidence": {
+    "report": "local_implementation_report_20260724.md",
+    "validation_report": "local_static_validation_report.json",
+    "local_static_valid": true,
+    "pytest_passed": 98,
+    "remote_training_ready": true
+  },
+  "remote_preflight_evidence": {
+    "report": "remote_preflight_report_20260724.md",
+    "inventory": "remote_preflight_inventory_20260724.json",
+    "tokenizer_order_audit": "remote_preflight_audit_20260724.json",
+    "resolved_prompt_registry": "prompt_registry_resolved_qwen35_20260724.json",
+    "tokenizer_order_preflight_passed": true,
+    "training_resource_gate_currently_passed": true,
+    "swap_baseline_observation": "swap_used_gib=7.097 is permitted by the user-approved 2026-07-24 baseline-monitoring revision",
+    "swap_revision": "existing swap usage is non-blocking when MemAvailable>=32 GiB; abort if experiment-attributable swap grows by >2 GiB or MemAvailable is <15 GiB for two consecutive samples",
+    "training_started": true,
+    "remote_training_permitted": false
+  },
+  "pipeline_smoke_evidence": {
+    "status": "pass",
+    "report": "docs/results-and-limitations.md",
+    "summary": "multiskill_pipeline_smoke_summary.json",
+    "summary_sha256": "c151280d01e3e16e5faff56a02f72328fc190b86d98292c1ef7de20e297a5bc0",
+    "environment_lock": "not_distributed",
+    "environment_lock_sha256": "not_distributed",
+    "gpu_index": null,
+    "run_count": 6,
+    "optimizer_steps_per_run": 2,
+    "total_optimizer_steps": 12,
+    "dataloader_traces_exact": true,
+    "same_initial_trainable_hash_between_arms": true,
+    "validation_scratch_only": true,
+    "confirmation_used": false,
+    "formal_training_started": false,
+    "remote_training_permitted": false
+  },
+  "formal_sft_evidence": {
+    "status": "completed_and_recovered",
+    "approved_by_user": true,
+    "approval_date": "2026-07-24",
+    "started_at": "2026-07-24T17:26:06+08:00",
+    "gpu_index": 0,
+    "runner_pid": 1812572,
+    "remote_root": "redacted",
+    "local_launch_record": "formal_sft_20260724_retry1/launch_info.json",
+    "expected_runs": 6,
+    "expected_optimizer_steps_per_run": 225,
+    "first_run": "refund_decision/random_mix_order",
+    "first_verified_global_step": 6,
+    "complete_marker": "pass",
+    "run_count": 6,
+    "total_optimizer_steps": 1350,
+    "all_dataloader_traces_exact": true,
+    "same_initial_trainable_parameter_sha256": "087fbe97a0f6a57c6b75fad39160cb1dfce26a6543d13998914669306b025127",
+    "recovery_manifest": "formal_sft_20260724_retry1/recovered/recovery_manifest.json",
+    "recovery_manifest_sha256": "821a00894cd9d4af4f4a6477bc35591f6f586e56243e9a4536126f42c87ba020",
+    "recovered_file_count": 117,
+    "recovered_total_bytes": 1175640994,
+    "gpu1_external_process_untouched": true,
+    "confirmation_used": false
+  },
+  "behavior_eval_evidence": {
+    "status": "completed_and_recovered",
+    "approved_by_user": true,
+    "approval_date": "2026-07-24",
+    "remote_root": "redacted",
+    "local_run_dir": "behavior_eval_20260724",
+    "gpu_index": 0,
+    "runner_pid": 1993815,
+    "started_at": "2026-07-24T23:17:15+08:00",
+    "post_training_smoke_status": "pass",
+    "post_training_smoke_expected_records": 96,
+    "post_training_smoke_actual_records": 96,
+    "post_training_smoke_endpoint_count": 6,
+    "post_training_smoke_pairing_complete": true,
+    "post_training_smoke_parse_failure_count": 1,
+    "post_training_smoke_schema_failure_count": 21,
+    "post_training_smoke_exact_tuple_correct_count": 75,
+    "post_training_smoke_manifest": "behavior_eval_20260724/post_training_smoke_completion_manifest.json",
+    "discovery_expected_records": 3072,
+    "discovery_started": true,
+    "discovery_completed_at": "2026-07-25T04:13:46+08:00",
+    "discovery_actual_records": 3072,
+    "discovery_endpoint_count": 6,
+    "discovery_pairing_complete": true,
+    "discovery_parse_failure_count": 164,
+    "discovery_schema_failure_count": 692,
+    "discovery_exact_tuple_correct_count": 2216,
+    "discovery_result_sha256": "0d98809ec79ec35332a6833609b97a60a6442a5546b1cb975172d18e3c108a80",
+    "recovery_manifest": "behavior_eval_20260724/recovered/recovery_manifest.json",
+    "recovery_manifest_sha256": "e3f695df374bb6a89f9b26208583c9c1e926078b9d332605f454911aa2118240",
+    "recovered_file_count": 83,
+    "recovered_total_bytes": 21739303,
+    "confirmation_used": false,
+    "pre_model_retry": {
+      "cause": "CRLF residue in the final TSV hash field",
+      "model_loaded": false,
+      "generated_records": 0,
+      "frozen_scientific_inputs_changed": false
+    }
+  },
+  "frozen_discovery_analysis_evidence": {
+    "status": "completed",
+    "decision": "FAIL",
+    "analysis_date": "2026-07-25",
+    "analysis_json": "frozen_discovery_analysis_20260725.json",
+    "analysis_json_sha256": "38e8548e384abf3179effc42390e6f62fd9034bb6784b51e85b607f80f32fee8",
+    "analysis_markdown": "frozen_discovery_analysis_20260725.md",
+    "analysis_markdown_sha256": "2d35a5a1d8718bdc86aa31ffcd1d538e514050642a748f485fa41ffda3b7ca93",
+    "conclusion_and_next_plan": "discovery_frozen_conclusion_and_next_plan_20260725.md",
+    "conclusion_and_next_plan_sha256": "10049d9d57ff86f82a1bff3107f1f9ab9023387cc2bca6af6cd72163875d63a0",
+    "engineering_gates_pass": true,
+    "prediction_count": 3072,
+    "prediction_sha256": "0d98809ec79ec35332a6833609b97a60a6442a5546b1cb975172d18e3c108a80",
+    "primary_construct_balanced_delta": -0.0920138888888889,
+    "case_cluster_ci95": [
+      -0.1284722222222222,
+      -0.055555555555555525
+    ],
+    "family_cluster_ci95": [
+      -0.1545138888888889,
+      -0.03559027777777781
+    ],
+    "per_skill_deltas": {
+      "refund_decision": 0.08333333333333331,
+      "warranty_claim_decision": 0.018229166666666685,
+      "expense_reimbursement_decision": -0.3776041666666667
+    },
+    "construct_deltas": {
+      "no_system": -0.375,
+      "irrelevant": -0.046875,
+      "paraphrase": 0.14583333333333337
+    },
+    "canonical_macro_delta": -0.04817708333333337,
+    "minimal_macro_delta": -0.00520833333333337,
+    "no_skill_macro_delta": -0.15625,
+    "schema_validity_guards_pass": false,
+    "minimum_per_skill_endpoint_schema_valid_rate": 0.6640625,
+    "minimum_per_skill_endpoint_condition_schema_valid_rate": 0.0,
+    "failed_per_skill_endpoint_schema_cells": 6,
+    "failed_per_skill_endpoint_condition_schema_cells": 30,
+    "confirmation_used": false,
+    "post_result_threshold_or_output_repair_used": false
+  },
+  "blocking_feasibility_audit": {
+    "report": "local_implementation_feasibility_audit_20260724.md",
+    "issue": "train_cases_per_rule_family=75 is incompatible with five decision fractions of 0.20+/-0.03 for all three skills",
+    "approved_repair": "B_preserve_exact_decision_balance_and_use_frozen_unequal_train_family_counts",
+    "approved_by_user": true,
+    "repair_review_verdict": "APPROVE",
+    "repair_review_p0_count": 0,
+    "repair_review_p1_count": 0
+  },
+  "revision": {
+    "review_verdict": "APPROVE_WITH_CHANGES",
+    "resolved_p1_items": [
+      "deterministic_rule_engines",
+      "only_record_order_engineering_guarantee",
+      "construct_balanced_primary_metric",
+      "executable_statistics_and_decision_states",
+      "all_split_leakage_and_confirmation_protection",
+      "deterministic_behavior_generation"
+    ],
+    "second_review_residual_p1_items_addressed": [
+      "refund_fact_contract",
+      "reason_code_to_rule_family_mapping",
+      "non_circular_tie_break",
+      "run_completion_vs_model_completion_terminology"
+    ],
+    "p2_hardening_added": [
+      "template_source_content_hash",
+      "target_template_registry",
+      "greedy_temperature_null",
+      "formal_eval_run_completion_manifest"
+    ],
+    "final_read_only_review_verdict": "APPROVE",
+    "final_review_p0_count": 0,
+    "final_review_p1_count": 0,
+    "final_review_report": "protocol_review_report_20260724.md"
+  },
+  "primary_question": "Does staged record order improve prompt-perturbation robustness across independently trained business-rule skills when the rendered training multiset and optimization budget are identical?",
+  "inference_scope": {
+    "single_seed": true,
+    "purpose": "screening_pilot",
+    "general_order_effect_claim_permitted": false,
+    "causal_skill_attribute_claim_permitted": false,
+    "h3_skill_heterogeneity_is_exploratory": true
+  },
+  "canonicalization_and_hashing": {
+    "algorithm": "sha256",
+    "text_encoding": "utf-8",
+    "json_canonicalization": "RFC8785_JCS",
+    "line_endings": "LF",
+    "record_id_formula": "sha256(protocol_version|skill_id|semantic_case_hash|segment_id|exposure)",
+    "semantic_case_hash_inputs": "skill_id plus canonical structured facts",
+    "facts_hash_inputs": "canonical structured facts only",
+    "target_hash_inputs": "canonical target JSON only",
+    "lexical_template_source_normalization": "UTF-8, LF, Unicode NFC, preserve slot names, strip trailing whitespace on each line and outer blank lines",
+    "lexical_template_source_sha256_inputs": "normalized slot-template source text",
+    "lexical_template_family_id": "lexical_template_source_sha256"
+  },
+  "missing_value_contract": {
+    "all_declared_fact_keys_required": true,
+    "absent_json_key_is_dataset_invalid": true,
+    "json_null_is_allowed_only_for": [
+      "refund_decision.days_since_delivery"
+    ],
+    "known_absence_of_evidence": "encoded as boolean false",
+    "missing_warranty_serial": "serial_status=missing",
+    "missing_warranty_failure_description": "failure_description_present=false",
+    "unknown_refund_delivery_age": "days_since_delivery=null",
+    "empty_string_for_missing_value_permitted": false
+  },
+  "shared_output_schema": {
+    "additional_properties": false,
+    "required": [
+      "decision",
+      "risk_level",
+      "need_human",
+      "reason_codes",
+      "explanation"
+    ],
+    "decision": [
+      "approve",
+      "approve_with_conditions",
+      "request_more_evidence",
+      "reject",
+      "manual_review"
+    ],
+    "risk_level": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "need_human": "boolean",
+    "reason_codes": "array[string]",
+    "explanation": "non_empty_string",
+    "reason_code_output_rule": "exactly one primary reason code selected by the first matching frozen priority branch",
+    "explanation_rule": "resolved only from target_template_registry.json by skill_id and primary reason code; the registry is frozen before training; explanation is not part of the primary exact tuple"
+  },
+  "shared_decision_contract": {
+    "approve": {
+      "risk_level": "low",
+      "need_human": false
+    },
+    "approve_with_conditions": {
+      "risk_level": "medium",
+      "need_human": false
+    },
+    "request_more_evidence": {
+      "risk_level": "medium",
+      "need_human": false
+    },
+    "reject": {
+      "risk_level": "low",
+      "need_human": false
+    },
+    "manual_review": {
+      "risk_level": "high",
+      "need_human": true
+    },
+    "overrides": {
+      "warranty_safety_recall": {
+        "decision": "approve_with_conditions",
+        "risk_level": "high",
+        "need_human": true
+      }
+    }
+  },
+  "skills": {
+    "refund_decision": {
+      "role": "existing_skill_retrained_under_pilot_protocol",
+      "fields": {
+        "product_type": "enum[standard,fresh,customized,virtual]",
+        "days_since_delivery": "integer>=0 or null",
+        "is_used": "boolean",
+        "is_resellable": "boolean",
+        "has_quality_issue": "boolean",
+        "has_evidence": "boolean",
+        "order_amount_cny": "decimal_string>=0 with at most two fractional digits",
+        "refund_count_30d": "integer>=0",
+        "user_claim": "enum[no_reason,size_not_fit,exchange,quality_issue,logistics_issue,complaint,strong_complaint]",
+        "order_status": "enum[delivered,not_delivered,closed,unknown]",
+        "seller_fault": "boolean",
+        "logistics_issue": "boolean",
+        "evidence_conflict": "boolean",
+        "order_info_conflict": "boolean"
+      },
+      "derived_predicates": {
+        "returnable": "not is_used and is_resellable and product_type != virtual",
+        "special_goods": "product_type in [fresh,customized,virtual]",
+        "no_reason_request": "not has_quality_issue and not logistics_issue and user_claim in [no_reason,size_not_fit,exchange]",
+        "missing_required_facts": "days_since_delivery is null or order_status=unknown"
+      },
+      "cross_field_invariants": [
+        "product_type is a single enum value, so fresh/customized/virtual are mutually exclusive",
+        "product_type=virtual requires is_resellable=false",
+        "order_status=unknown requires days_since_delivery=null",
+        "order_status in [delivered,closed] requires days_since_delivery!=null",
+        "order_status=not_delivered requires days_since_delivery=0 and logistics_issue=true",
+        "seller_fault=true requires logistics_issue=true"
+      ],
+      "rule_families": [
+        "R1_missing_required_facts",
+        "R2_risk_escalation",
+        "R3_logistics_issue",
+        "R4_quality_issue",
+        "R5_special_goods_exclusion",
+        "R6_within_7_day_standard",
+        "R7_used_or_not_resellable",
+        "R8_over_7_day_boundary"
+      ],
+      "thresholds": {
+        "return_window_days_inclusive": 7,
+        "high_value_order_amount_cny_gte": 1000,
+        "frequent_refund_count_30d_gte": 3
+      },
+      "priority_order": [
+        "missing_required_facts -> request_more_evidence:missing_required_facts",
+        "evidence_conflict -> manual_review:evidence_conflict",
+        "order_info_conflict -> manual_review:order_info_conflict",
+        "order_amount_cny >= 1000 -> manual_review:high_value_order",
+        "refund_count_30d >= 3 -> manual_review:frequent_refund_user",
+        "logistics_issue and (seller_fault or has_evidence) -> approve:logistics_issue_supported",
+        "logistics_issue otherwise -> request_more_evidence:logistics_issue_insufficient_evidence",
+        "quality_issue and not has_evidence -> request_more_evidence:quality_issue_no_evidence",
+        "quality_issue with evidence and returnable -> approve_with_conditions:quality_issue_return_refund",
+        "quality_issue with evidence and not returnable -> approve:quality_issue_refund_only",
+        "special_goods and no_reason_request -> reject:special_goods_exclusion",
+        "days_since_delivery <= 7 and returnable -> approve_with_conditions:within_7_days_unused",
+        "days_since_delivery <= 7 otherwise -> reject:used_or_not_resellable",
+        "otherwise -> reject:over_7_days_no_quality_issue"
+      ],
+      "reason_codes": [
+        "missing_required_facts",
+        "evidence_conflict",
+        "order_info_conflict",
+        "high_value_order",
+        "frequent_refund_user",
+        "logistics_issue_supported",
+        "logistics_issue_insufficient_evidence",
+        "quality_issue_no_evidence",
+        "quality_issue_return_refund",
+        "quality_issue_refund_only",
+        "special_goods_exclusion",
+        "within_7_days_unused",
+        "used_or_not_resellable",
+        "over_7_days_no_quality_issue"
+      ],
+      "reason_code_to_rule_family": {
+        "missing_required_facts": "R1_missing_required_facts",
+        "evidence_conflict": "R2_risk_escalation",
+        "order_info_conflict": "R2_risk_escalation",
+        "high_value_order": "R2_risk_escalation",
+        "frequent_refund_user": "R2_risk_escalation",
+        "logistics_issue_supported": "R3_logistics_issue",
+        "logistics_issue_insufficient_evidence": "R3_logistics_issue",
+        "quality_issue_no_evidence": "R4_quality_issue",
+        "quality_issue_return_refund": "R4_quality_issue",
+        "quality_issue_refund_only": "R4_quality_issue",
+        "special_goods_exclusion": "R5_special_goods_exclusion",
+        "within_7_days_unused": "R6_within_7_day_standard",
+        "used_or_not_resellable": "R7_used_or_not_resellable",
+        "over_7_days_no_quality_issue": "R8_over_7_day_boundary"
+      }
+    },
+    "warranty_claim_decision": {
+      "role": "near_domain_new_skill",
+      "rule_families": [
+        "W1_missing_evidence",
+        "W2_in_warranty_manufacturing_defect",
+        "W3_non_manufacturing_exclusions",
+        "W4_unauthorized_repair",
+        "W5_expired_warranty_boundary",
+        "W6_repeat_repair_escalation",
+        "W7_integrity_or_abnormal_claim",
+        "W8_safety_recall_override"
+      ],
+      "fields": {
+        "product_category": "enum[electronics,appliance,tool,other]",
+        "days_since_purchase": "integer>=0",
+        "warranty_days": "integer>=0",
+        "failure_type": "enum[manufacturing_defect,accidental_damage,liquid_damage,normal_wear,unknown]",
+        "failure_description_present": "boolean",
+        "has_purchase_proof": "boolean",
+        "has_diagnostic_evidence": "boolean",
+        "unauthorized_repair": "boolean",
+        "unauthorized_repair_caused_current_failure": "boolean",
+        "extended_coverage": "boolean",
+        "prior_repair_count": "integer>=0",
+        "same_failure_recurrence": "boolean",
+        "serial_status": "enum[missing,match,mismatch]",
+        "safety_recall": "boolean",
+        "claim_amount_cny": "decimal_string>=0 with at most two fractional digits",
+        "evidence_conflict": "boolean"
+      },
+      "cross_field_invariants": [
+        "unauthorized_repair_caused_current_failure=true requires unauthorized_repair=true",
+        "same_failure_recurrence=true requires prior_repair_count>=1"
+      ],
+      "thresholds": {
+        "in_warranty": "days_since_purchase <= warranty_days",
+        "abnormal_claim_amount_cny_gte": "3000.00",
+        "repeat_repair_count_gte": 2
+      },
+      "priority_order": [
+        "safety_recall -> approve_with_conditions/high/need_human=true:safety_recall",
+        "evidence_conflict -> manual_review:evidence_conflict",
+        "serial_status=mismatch -> manual_review:serial_mismatch",
+        "serial_status=missing -> request_more_evidence:serial_missing",
+        "not has_purchase_proof -> request_more_evidence:purchase_proof_missing",
+        "not failure_description_present -> request_more_evidence:failure_description_missing",
+        "claim_amount_cny >= 3000.00 -> manual_review:abnormal_claim_amount",
+        "unauthorized_repair_caused_current_failure -> reject:unauthorized_repair_causal",
+        "out of warranty and prior_repair_count>=2 and same_failure_recurrence -> manual_review:repeat_failure_after_repairs",
+        "out of warranty otherwise -> reject:warranty_expired",
+        "failure_type in [accidental_damage,liquid_damage] and extended_coverage -> approve_with_conditions:extended_damage_covered",
+        "failure_type in [accidental_damage,liquid_damage] otherwise -> reject:accidental_or_liquid_not_covered",
+        "failure_type=manufacturing_defect and has_diagnostic_evidence -> approve:manufacturing_defect_supported",
+        "failure_type=manufacturing_defect otherwise -> request_more_evidence:diagnostic_evidence_missing",
+        "failure_type=normal_wear -> reject:normal_wear_excluded",
+        "failure_type=unknown -> request_more_evidence:failure_type_unclear"
+      ],
+      "reason_codes": [
+        "safety_recall",
+        "evidence_conflict",
+        "serial_mismatch",
+        "serial_missing",
+        "purchase_proof_missing",
+        "failure_description_missing",
+        "abnormal_claim_amount",
+        "unauthorized_repair_causal",
+        "repeat_failure_after_repairs",
+        "warranty_expired",
+        "extended_damage_covered",
+        "accidental_or_liquid_not_covered",
+        "manufacturing_defect_supported",
+        "diagnostic_evidence_missing",
+        "normal_wear_excluded",
+        "failure_type_unclear"
+      ],
+      "reason_code_to_rule_family": {
+        "safety_recall": "W8_safety_recall_override",
+        "evidence_conflict": "W7_integrity_or_abnormal_claim",
+        "serial_mismatch": "W7_integrity_or_abnormal_claim",
+        "serial_missing": "W1_missing_evidence",
+        "purchase_proof_missing": "W1_missing_evidence",
+        "failure_description_missing": "W1_missing_evidence",
+        "abnormal_claim_amount": "W7_integrity_or_abnormal_claim",
+        "unauthorized_repair_causal": "W4_unauthorized_repair",
+        "repeat_failure_after_repairs": "W6_repeat_repair_escalation",
+        "warranty_expired": "W5_expired_warranty_boundary",
+        "extended_damage_covered": "W3_non_manufacturing_exclusions",
+        "accidental_or_liquid_not_covered": "W3_non_manufacturing_exclusions",
+        "manufacturing_defect_supported": "W2_in_warranty_manufacturing_defect",
+        "diagnostic_evidence_missing": "W2_in_warranty_manufacturing_defect",
+        "normal_wear_excluded": "W3_non_manufacturing_exclusions",
+        "failure_type_unclear": "W1_missing_evidence"
+      }
+    },
+    "expense_reimbursement_decision": {
+      "role": "far_domain_new_skill",
+      "rule_families": [
+        "E1_missing_documentation",
+        "E2_standard_compliant",
+        "E3_category_cap_boundary",
+        "E4_personal_expense_exclusion",
+        "E5_late_submission_boundary",
+        "E6_manager_approval_override",
+        "E7_duplicate_or_evidence_conflict",
+        "E8_high_value_or_foreign_currency"
+      ],
+      "fields": {
+        "expense_category": "enum[meal,local_transport,hotel,office_supply,training]",
+        "amount": "decimal_string>0 with at most two fractional digits",
+        "currency": "enum[CNY,USD,EUR,JPY,GBP,HKD]",
+        "hotel_nights": "integer>=0",
+        "days_since_expense": "integer>=0",
+        "has_receipt": "boolean",
+        "receipt_matches_amount": "boolean",
+        "business_purpose_present": "boolean",
+        "manager_approved": "boolean",
+        "project_code_valid": "boolean",
+        "is_duplicate_claim": "boolean",
+        "is_personal_expense": "boolean",
+        "is_weekend_or_holiday": "boolean",
+        "international_trip": "boolean",
+        "policy_exception_documented": "boolean",
+        "evidence_conflict": "boolean"
+      },
+      "cross_field_invariants": [
+        "expense_category=hotel requires hotel_nights>=1",
+        "expense_category!=hotel requires hotel_nights=0",
+        "has_receipt=false requires receipt_matches_amount=false"
+      ],
+      "currency_to_cny": {
+        "arithmetic": "Python Decimal; amount and rate parsed from strings; quantize CNY to 0.01 using ROUND_HALF_UP",
+        "rates": {
+          "CNY": "1.00",
+          "USD": "7.20",
+          "EUR": "7.80",
+          "JPY": "0.048",
+          "GBP": "9.10",
+          "HKD": "0.92"
+        }
+      },
+      "category_caps_cny": {
+        "meal": "300.00",
+        "local_transport": "500.00",
+        "hotel": "1200.00 * hotel_nights",
+        "office_supply": "1000.00",
+        "training": "3000.00"
+      },
+      "thresholds": {
+        "late_submission_days_gt": 30,
+        "cny_high_value_gte": "5000.00",
+        "non_cny_high_value_equivalent_cny_gte": "2000.00"
+      },
+      "priority_order": [
+        "is_duplicate_claim -> manual_review:duplicate_claim",
+        "evidence_conflict -> manual_review:evidence_conflict",
+        "has_receipt and not receipt_matches_amount -> manual_review:receipt_amount_mismatch",
+        "not has_receipt -> request_more_evidence:receipt_missing",
+        "not business_purpose_present -> request_more_evidence:business_purpose_missing",
+        "not project_code_valid -> request_more_evidence:project_code_invalid",
+        "currency=CNY and cny_amount>=5000.00 -> manual_review:high_value_expense",
+        "currency!=CNY and cny_amount>=2000.00 -> manual_review:high_value_foreign_currency",
+        "is_personal_expense and not policy_exception_documented -> reject:personal_expense",
+        "days_since_expense>30 and not policy_exception_documented -> reject:late_submission",
+        "policy_exception_documented and (is_personal_expense or days_since_expense>30) and not manager_approved -> request_more_evidence:exception_manager_approval_missing",
+        "policy_exception_documented and (is_personal_expense or days_since_expense>30) and manager_approved -> approve_with_conditions:documented_policy_exception",
+        "converted amount exceeds category cap and manager_approved -> approve_with_conditions:cap_override_approved",
+        "converted amount exceeds category cap otherwise -> reject:category_cap_exceeded",
+        "otherwise -> approve:standard_compliant"
+      ],
+      "priority_clarification": "high-value review is evaluated before category-cap handling; category and high-value rules can never compete",
+      "reason_codes": [
+        "duplicate_claim",
+        "evidence_conflict",
+        "receipt_amount_mismatch",
+        "receipt_missing",
+        "business_purpose_missing",
+        "project_code_invalid",
+        "high_value_expense",
+        "high_value_foreign_currency",
+        "personal_expense",
+        "late_submission",
+        "exception_manager_approval_missing",
+        "documented_policy_exception",
+        "cap_override_approved",
+        "category_cap_exceeded",
+        "standard_compliant"
+      ],
+      "reason_code_to_rule_family": {
+        "duplicate_claim": "E7_duplicate_or_evidence_conflict",
+        "evidence_conflict": "E7_duplicate_or_evidence_conflict",
+        "receipt_amount_mismatch": "E7_duplicate_or_evidence_conflict",
+        "receipt_missing": "E1_missing_documentation",
+        "business_purpose_missing": "E1_missing_documentation",
+        "project_code_invalid": "E1_missing_documentation",
+        "high_value_expense": "E8_high_value_or_foreign_currency",
+        "high_value_foreign_currency": "E8_high_value_or_foreign_currency",
+        "personal_expense": "E4_personal_expense_exclusion",
+        "late_submission": "E5_late_submission_boundary",
+        "exception_manager_approval_missing": "E6_manager_approval_override",
+        "documented_policy_exception": "E6_manager_approval_override",
+        "cap_override_approved": "E6_manager_approval_override",
+        "category_cap_exceeded": "E3_category_cap_boundary",
+        "standard_compliant": "E2_standard_compliant"
+      }
+    }
+  },
+  "splits_per_skill": {
+    "train": 600,
+    "validation": 64,
+    "discovery_eval": 64,
+    "confirmation": 64,
+    "total_unique_semantic_cases": 792
+  },
+  "split_gates": {
+    "all_split_pairs": [
+      "train:validation",
+      "train:discovery_eval",
+      "train:confirmation",
+      "validation:discovery_eval",
+      "validation:confirmation",
+      "discovery_eval:confirmation"
+    ],
+    "zero_overlap_required_for_each_pair": [
+      "semantic_case_hash",
+      "facts_hash",
+      "lexical_template_family",
+      "lexical_template_source_sha256"
+    ],
+    "validation_cases_per_rule_family": 8,
+    "discovery_cases_per_rule_family": 8,
+    "confirmation_cases_per_rule_family": 8,
+    "train_decision_counts_per_skill": {
+      "approve": 120,
+      "approve_with_conditions": 120,
+      "request_more_evidence": 120,
+      "reject": 120,
+      "manual_review": 120
+    },
+    "train_family_decision_counts": {
+      "refund_decision": {
+        "R1_missing_required_facts": {
+          "request_more_evidence": 60
+        },
+        "R2_risk_escalation": {
+          "manual_review": 120
+        },
+        "R3_logistics_issue": {
+          "approve": 120
+        },
+        "R4_quality_issue": {
+          "approve_with_conditions": 60,
+          "request_more_evidence": 60
+        },
+        "R5_special_goods_exclusion": {
+          "reject": 40
+        },
+        "R6_within_7_day_standard": {
+          "approve_with_conditions": 60
+        },
+        "R7_used_or_not_resellable": {
+          "reject": 40
+        },
+        "R8_over_7_day_boundary": {
+          "reject": 40
+        }
+      },
+      "warranty_claim_decision": {
+        "W1_missing_evidence": {
+          "request_more_evidence": 120
+        },
+        "W2_in_warranty_manufacturing_defect": {
+          "approve": 120
+        },
+        "W3_non_manufacturing_exclusions": {
+          "approve_with_conditions": 60
+        },
+        "W4_unauthorized_repair": {
+          "reject": 60
+        },
+        "W5_expired_warranty_boundary": {
+          "reject": 60
+        },
+        "W6_repeat_repair_escalation": {
+          "manual_review": 60
+        },
+        "W7_integrity_or_abnormal_claim": {
+          "manual_review": 60
+        },
+        "W8_safety_recall_override": {
+          "approve_with_conditions": 60
+        }
+      },
+      "expense_reimbursement_decision": {
+        "E1_missing_documentation": {
+          "request_more_evidence": 120
+        },
+        "E2_standard_compliant": {
+          "approve": 120
+        },
+        "E3_category_cap_boundary": {
+          "reject": 40
+        },
+        "E4_personal_expense_exclusion": {
+          "reject": 40
+        },
+        "E5_late_submission_boundary": {
+          "reject": 40
+        },
+        "E6_manager_approval_override": {
+          "approve_with_conditions": 120
+        },
+        "E7_duplicate_or_evidence_conflict": {
+          "manual_review": 60
+        },
+        "E8_high_value_or_foreign_currency": {
+          "manual_review": 60
+        }
+      }
+    },
+    "minimum_discovery_fraction_per_decision_inclusive": 0.1,
+    "priority_overlap_oracle_tests_required": true
+  },
+  "confirmation_protection": {
+    "locked": true,
+    "model_evaluation_permitted": false,
+    "training_permitted": false,
+    "inspection_by_training_or_evaluation_script_permitted": false,
+    "required_artifact": "confirmation_lock_manifest.json",
+    "required_sha256_fields": [
+      "case_manifest_sha256",
+      "facts_multiset_sha256",
+      "rendered_text_sha256",
+      "token_ids_sha256"
+    ],
+    "hard_reject_policy": "any train or eval command receiving split=confirmation or a confirmation path exits nonzero before loading model or tokenizer"
+  },
+  "prompt_freeze_registry": {
+    "required_before_remote_training": true,
+    "required_artifact": "prompt_registry.json",
+    "must_contain_exact_utf8_text_and_sha256_for": [
+      "skill_id x full",
+      "skill_id x partial",
+      "skill_id x minimal",
+      "skill_id x no_skill",
+      "skill_id x full_length_irrelevant",
+      "skill_id x partial_semantic_paraphrase_a",
+      "skill_id x partial_semantic_paraphrase_b"
+    ],
+    "legacy_no_system_representation": "system_message_absent",
+    "freeze_seeds": {
+      "case_generation": 2026072401,
+      "template_rendering": 2026072402,
+      "exposure_assignment": 2026072403,
+      "within_segment_order": 2026072404,
+      "random_mix_order": 2026072405,
+      "training": 20260724,
+      "bootstrap": 20260724
+    },
+    "required_non_null_hashes_before_training": [
+      "prompt_registry_sha256",
+      "case_manifest_sha256_per_skill_and_split",
+      "rendered_record_multiset_sha256_per_skill",
+      "ordered_record_sha256_per_skill_and_arm",
+      "token_ids_sha256_per_skill_and_condition",
+      "tokenizer_files_sha256",
+      "chat_template_sha256",
+      "target_template_registry_sha256",
+      "confirmation_lock_manifest_sha256"
+    ]
+  },
+  "target_template_registry": {
+    "required_before_training": true,
+    "required_artifact": "target_template_registry.json",
+    "must_contain_exact_literal_explanation_template_for_every": "skill_id x primary_reason_code",
+    "required_hash": "target_template_registry_sha256",
+    "generator_may_construct_unregistered_explanation": false
+  },
+  "exposures": [
+    "full",
+    "partial",
+    "minimal",
+    "no_skill"
+  ],
+  "training_records_per_skill": {
+    "stage1": {
+      "total": 600,
+      "full": 510,
+      "partial": 90,
+      "minimal": 0,
+      "no_skill": 0
+    },
+    "stage2": {
+      "total": 600,
+      "full": 120,
+      "partial": 330,
+      "minimal": 150,
+      "no_skill": 0
+    },
+    "stage3": {
+      "total": 600,
+      "full": 0,
+      "partial": 120,
+      "minimal": 270,
+      "no_skill": 210
+    },
+    "total": {
+      "records": 1800,
+      "full": 630,
+      "partial": 540,
+      "minimal": 420,
+      "no_skill": 210
+    }
+  },
+  "record_order_construction": {
+    "exposure_assignment": "within each skill and segment, sort all 600 semantic_case_hash values by sha256(exposure_assignment_seed|skill_id|segment_id|semantic_case_hash), tie-break by semantic_case_hash, then allocate contiguous exposure blocks using the exact segment counts",
+    "staged_within_segment_order": "sort each segment by sha256(within_segment_order_seed|skill_id|segment_id|record_id), tie-break by record_id; concatenate stage1, stage2, stage3",
+    "random_mix_order": "sort the identical 1800-record multiset by sha256(random_mix_order_seed|skill_id|record_id), tie-break by record_id",
+    "required_multiset_hash_match": true,
+    "required_ordered_hash_difference": true,
+    "only_authorized_difference": "record_order",
+    "dataloader_audit": "capture the emitted record_id sequence; require exact equality to the arm file and chunk positions 1..1800 into 225 consecutive optimizer steps of 8 microbatches"
+  },
+  "training_config": {
+    "base_model": "Qwen3.5-4B (user-supplied, locally licensed)",
+    "conda_environment_name": "Qwen35",
+    "conda_environment_path": "not_distributed",
+    "framework": "ms-swift",
+    "swift_version": "4.1.1",
+    "python_version_constraint": "3.12.*",
+    "exact_environment_lock_required": true,
+    "exact_environment_lock_artifact": "conda_explicit_lock.txt",
+    "tuner": "lora",
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "target_modules": "all-linear",
+    "dtype": "bfloat16",
+    "epochs": 1,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 0.0001,
+    "optimizer": "adamw_torch",
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-8,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "lr_scheduler_type": "linear",
+    "warmup_steps": 10,
+    "max_length": 2048,
+    "overlength_policy": "hard_fail_before_training; no truncation",
+    "packing": false,
+    "padding_side": "right",
+    "pad_to_multiple_of": null,
+    "loss_normalization": "mean over non-ignored assistant target tokens in each microbatch; accumulated gradients divided by 8",
+    "dataset_shuffle": false,
+    "train_dataloader_shuffle": false,
+    "dataset_num_proc": 1,
+    "dataloader_num_workers": 0,
+    "resume_from_checkpoint": false,
+    "seed": 20260724,
+    "data_seed": 20260724,
+    "optimizer_steps": 225,
+    "save_steps": 225,
+    "deterministic_settings": {
+      "pythonhashseed": 20260724,
+      "torch_use_deterministic_algorithms": true,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": true,
+      "tf32": false
+    },
+    "frozen_initialized_lora_artifact_required_per_skill": true,
+    "both_arms_load_same_initialized_lora_artifact": true,
+    "required_equal_initial_trainable_parameter_hash": true,
+    "required_equal_base_model_tokenizer_lora_config_and_environment_hashes": true
+  },
+  "behavior_eval": {
+    "split": "discovery_eval",
+    "context": "short",
+    "case_count_per_skill": 64,
+    "conditions": [
+      "full",
+      "partial",
+      "minimal",
+      "no_skill",
+      "legacy_no_system",
+      "full_length_irrelevant",
+      "partial_semantic_paraphrase_a",
+      "partial_semantic_paraphrase_b"
+    ],
+    "endpoints": [
+      "random_mix_order",
+      "staged_order"
+    ],
+    "total_generation_records": 3072,
+    "full_irrelevant_max_prompt_token_delta": 0,
+    "main_exact_fields": [
+      "decision",
+      "risk_level",
+      "need_human"
+    ],
+    "generation_config": {
+      "backend": "transformers",
+      "do_sample": false,
+      "enable_thinking": false,
+      "add_non_thinking_prefix": true,
+      "max_new_tokens": 192,
+      "num_beams": 1,
+      "temperature": null,
+      "top_p": null,
+      "top_k": null,
+      "repetition_penalty": 1.0,
+      "stop_on": [
+        "tokenizer_eos_token_id",
+        "chat_template_end_of_turn_token_id"
+      ],
+      "custom_stop_strings": [],
+      "retry_on_invalid_output": 0
+    },
+    "json_extraction": {
+      "rule": "after removing the fixed non-thinking prefix and outer Unicode whitespace, parse the entire remaining string as exactly one JSON object",
+      "markdown_code_fence_permitted": false,
+      "leading_or_trailing_non_whitespace_permitted": false,
+      "duplicate_json_keys_permitted": false,
+      "empty_output_policy": "schema_invalid_and_exact_tuple_incorrect",
+      "parse_error_policy": "schema_invalid_and_exact_tuple_incorrect",
+      "schema_error_policy": "schema_invalid_and_exact_tuple_incorrect",
+      "extra_keys_policy": "schema_invalid_and_exact_tuple_incorrect",
+      "manual_repair_or_second_decode_permitted": false
+    },
+    "required_runtime_hashes": [
+      "tokenizer_files_sha256",
+      "chat_template_sha256",
+      "generation_config_sha256",
+      "ordered_eval_manifest_sha256"
+    ]
+  },
+  "statistics": {
+    "constructs": {
+      "no_system": [
+        "legacy_no_system"
+      ],
+      "irrelevant": [
+        "full_length_irrelevant"
+      ],
+      "paraphrase": [
+        "partial_semantic_paraphrase_a",
+        "partial_semantic_paraphrase_b"
+      ]
+    },
+    "per_case_endpoint_robustness_score": "(correct_no_system + correct_irrelevant + mean(correct_paraphrase_a, correct_paraphrase_b)) / 3",
+    "per_skill_effect": "mean_case_score_staged - mean_case_score_random",
+    "primary_effect": "equal-weight macro mean of the three per-skill effects",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20260724,
+    "case_cluster_bootstrap": "independently within each skill sample 64 semantic cases with replacement, retain all four perturbation observations for each sampled case, compute per-skill effects, then equal-weight the three skills",
+    "family_cluster_bootstrap": "independently within each skill sample its 8 rule families with replacement, retain all cases and four perturbations in each sampled family, compute per-skill effects, then equal-weight the three skills",
+    "ci_method": "percentile_2.5_97.5",
+    "paired_tests": "two-sided exact McNemar separately for each skill x condition; no pooled repeated-observation McNemar",
+    "paired_test_multiplicity": "Holm correction across the 12 skill x robust-condition tests; canonical tests are descriptive",
+    "random_effects_meta_analysis": false
+  },
+  "quality_guards": {
+    "schema_valid_rate_per_skill_endpoint_min_inclusive": 0.98,
+    "schema_valid_rate_per_skill_endpoint_condition_min_inclusive": 0.95,
+    "canonical_macro_delta_min_inclusive": -0.02,
+    "canonical_per_skill_delta_min_exclusive": -0.05,
+    "minimal_macro_delta_min_exclusive": -0.05,
+    "no_skill_macro_delta_min_exclusive": -0.05,
+    "robust_construct_macro_delta_min_exclusive": -0.05,
+    "boundary_semantics": "every -0.05 non-degradation boundary is strict: delta exactly -0.05 fails the guard"
+  },
+  "decision_logic": {
+    "priority": [
+      "DATA_INVALID",
+      "PASS",
+      "FAIL",
+      "MIXED",
+      "INCONCLUSIVE"
+    ],
+    "DATA_INVALID": "any dataset, split, hash, prompt, tokenization, initialization, dataloader, run_completion_marker, eval_run_completion_manifest, pairing, or confirmation-lock engineering gate fails; malformed model completion text is not an engineering-gate failure",
+    "PASS": [
+      "primary construct-balanced macro delta >= 0.05",
+      "case-cluster bootstrap CI95 lower bound > 0",
+      "family-cluster bootstrap CI95 lower bound > 0",
+      "at least 2 of 3 per-skill deltas >= 0.05",
+      "every per-skill delta > -0.05",
+      "every construct macro delta > -0.05",
+      "canonical macro delta >= -0.02",
+      "every per-skill canonical delta > -0.05",
+      "minimal and no_skill macro deltas each > -0.05",
+      "all schema validity guards pass"
+    ],
+    "FAIL": [
+      "primary construct-balanced macro delta <= 0",
+      "at least 2 of 3 per-skill deltas < 0",
+      "any per-skill delta <= -0.05",
+      "any construct macro delta <= -0.05",
+      "canonical macro delta <= -0.05",
+      "any per-skill canonical delta <= -0.05",
+      "minimal or no_skill macro delta <= -0.05"
+    ],
+    "MIXED": "after excluding PASS and FAIL, at least one per-skill delta >= 0.05 and at least one per-skill delta < 0, or the max-minus-min per-skill delta is >= 0.10",
+    "INCONCLUSIVE": "all valid outcomes not classified by PASS, FAIL, or MIXED",
+    "confirmation_unlock_automatic": false
+  },
+  "smoke_gates": {
+    "pre_training_pipeline_smoke": {
+      "data": "validation-only scratch records",
+      "steps": 2,
+      "purpose": "verify initialization load, record order, optimizer stepping, checkpoint writing and memory",
+      "outputs_are_scientifically_evaluable": false,
+      "outputs_must_be_discarded": true
+    },
+    "post_training_load_and_generation_smoke": {
+      "data": "2 validation cases x 8 conditions per endpoint",
+      "purpose": "verify adapter loading, deterministic decoding and strict JSON parser",
+      "included_in_discovery_statistics": false
+    }
+  },
+  "resource_and_run_completion_gates": {
+    "remote_root": "redacted",
+    "preferred_gpu": "GPU0",
+    "gpu0_idle_gate": "three checks 10 seconds apart: no compute process, utilization <=5%, memory.used <=1000 MiB",
+    "gpu1_external_task_protected": true,
+    "gpu1_query_only": false,
+    "gpu1_pipeline_smoke_approved_by_user": true,
+    "gpu1_pipeline_smoke_approval_date": "2026-07-24",
+    "gpu1_authorization_scope": "validation-only two-step pipeline smoke; formal SFT is running on GPU0 and GPU1 remains protected",
+    "minimum_host_available_memory_gib": 32,
+    "maximum_host_swap_used_gib": null,
+    "existing_swap_usage_is_hard_gate": false,
+    "swap_baseline_revision_approved_by_user": true,
+    "swap_baseline_revision_date": "2026-07-24",
+    "maximum_experiment_swap_growth_gib": 2,
+    "runtime_abort_available_memory_gib": 15,
+    "runtime_abort_available_memory_consecutive_samples": 2,
+    "maximum_sequence_length_tokens": 2048,
+    "cuda_retry_limit": 1,
+    "cuda_retry_policy": "retry once only with identical frozen configuration after terminating this experiment's own failed process and confirming the idle gate; a second failure aborts the arm",
+    "automatic_batch_or_length_change_permitted": false,
+    "completion_marker_required_per_arm": true,
+    "completion_marker_fields": [
+      "skill_id",
+      "arm",
+      "exit_code",
+      "checkpoint_path",
+      "checkpoint_sha256",
+      "initial_lora_sha256",
+      "ordered_record_sha256",
+      "dataloader_trace_sha256",
+      "optimizer_steps",
+      "environment_lock_sha256",
+      "finished_at"
+    ],
+    "completed_arm_requires_exit_code_zero_and_optimizer_steps_225": true,
+    "formal_eval_run_completion_manifest": {
+      "required": true,
+      "artifact": "behavior_eval_completion_manifest.json",
+      "expected_records": 3072,
+      "required_fields": [
+        "expected_records",
+        "actual_records",
+        "unique_pairing_key_count",
+        "duplicate_pairing_key_count",
+        "missing_pairing_key_count",
+        "model_completion_parse_failure_count",
+        "model_completion_schema_failure_count",
+        "ordered_eval_manifest_sha256",
+        "result_file_sha256",
+        "exit_code",
+        "finished_at"
+      ],
+      "run_complete_requires": "exit_code=0, actual_records=3072, unique_pairing_key_count=3072, duplicate_pairing_key_count=0, missing_pairing_key_count=0",
+      "model_completion_failure_semantics": "parse/schema failures are retained as valid scientific observations and counted incorrect; they do not make the eval run incomplete"
+    }
+  },
+  "locked_scope": {
+    "existing_confirmation": true,
+    "pilot_confirmation": true,
+    "multiple_seeds": true,
+    "long_context": true,
+    "gradient_or_activation_analysis": true,
+    "joint_multiskill_training": true,
+    "skill_routing": true,
+    "grpo": true,
+    "post_result_protocol_edits": true
+  },
+  "next_stage_on_pass": {
+    "requires_new_approval": true,
+    "skill_count_range": [
+      4,
+      6
+    ],
+    "seed_count": 3,
+    "contexts": [
+      "short",
+      "long"
+    ]
+  },
+  "next_authorized_step": "archive the frozen FAIL result and open a separate discussion to design a pre-registered cross-skill gradient boundary study; the goal is to explain or predict skill-dependent behavior, not optimize staged; do not run confirmation, gradients, new training, or new evaluation without explicit approval"
+}

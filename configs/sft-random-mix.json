@@ -1,0 +1,9 @@
+{
+  "name": "random-mix",
+  "base_model": "Qwen3.5-4B (user-supplied, locally licensed)",
+  "seed": 42,
+  "records": 1800,
+  "data_builder": {"method": "random_mix", "records": 1800, "exposure_counts": {"full": 450, "partial": 450, "minimal": 450, "no_skill": 450}},
+  "lora": {"rank": 8, "alpha": 16, "target_modules": "all-linear"},
+  "training": {"epochs": 3, "learning_rate": 0.0001, "per_device_batch_size": 1, "gradient_accumulation_steps": 8, "precision": "bf16"}
+}
