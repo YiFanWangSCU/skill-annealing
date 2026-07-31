@@ -24,7 +24,7 @@ The scanner checks common OpenAI/Hugging Face/W&B key formats, credential assign
 
 - No model weights, datasets, or ms-swift source code are redistributed.
 - Qwen and ms-swift must be installed separately and used under their own licenses.
-- The release candidate intentionally has **no repository LICENSE** until the author confirms authorship/provenance for every retained file. `NOTICE.md` records this restriction.
+- The author has confirmed the retained repository code, documentation, figures, and synthetic data for release under the MIT License. `NOTICE.md` records the boundary for unbundled third-party dependencies.
 
 ## Reproducibility review
 

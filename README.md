@@ -107,8 +107,8 @@ docs/               protocol, results, and limitations
 tests/              focused regression tests
 ```
 
-## 发布与许可证说明
+## 许可证与发布边界
 
 运行 `python scripts/scan_public_release.py` 可执行保守的 key、私有路径和大文件扫描。模型权重、真实业务数据、服务器日志、checkpoint、optimizer state、tokens 和未脱敏预测均不在仓库。
 
-暂未附加 LICENSE：虽然本镜像不分发任何第三方权重或数据，仍需要作者逐文件确认著作权与外部依赖许可。详见 [`NOTICE.md`](NOTICE.md)。
+本仓库代码、文档、图表和合成数据以 [MIT License](LICENSE) 发布。Qwen 权重、ms-swift 和任何第三方数据均未随仓库分发；请自行获取并遵守各自的许可证。合成业务规则仅用于研究示例，不构成生产政策或法律建议。详见 [`NOTICE.md`](NOTICE.md)。

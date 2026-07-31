@@ -1,8 +1,9 @@
 # Release notice
 
-This repository contains original experiment code and synthetic data only. It
-does not redistribute Qwen weights, ms-swift, or any third-party dataset.
+This repository contains author-released experiment code, documentation,
+figures, and synthetic data under the MIT License. It does not redistribute
+Qwen weights, ms-swift, or any third-party dataset.
 
-No repository-wide open-source license is included yet: the author must first
-confirm ownership and licensing for every retained file. Use is therefore
-reserved by default until that review is complete.
+Third-party models, libraries, and datasets must be obtained separately and
+used under their own licenses. The synthetic business rules are research
+examples, not production policy or legal guidance.
