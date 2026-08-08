@@ -1,0 +1,2 @@
+# Hash-verified data files must stay LF on every platform (validator compares byte-level sha256).
+configs/multiskill_pipeline_smoke_summary.json text eol=lf
